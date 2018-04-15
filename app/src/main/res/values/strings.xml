@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">OcAndroidTwo</string>
+    <string name="app_name">Third</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_listview">ListView load</string>
 </resources>
