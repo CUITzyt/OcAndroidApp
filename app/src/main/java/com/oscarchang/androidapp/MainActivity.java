@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.oscarchang.androidapp.aidl.BindAdilActivity;
 import com.oscarchang.androidapp.comm.MyLog;
 import com.oscarchang.androidapp.db.MovieActivity;
 import com.oscarchang.androidapp.leakcanary.LeakTestActivity;
@@ -17,7 +18,7 @@ import com.oscarchang.androidapp.leakcanary.LeakTestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLoadListView, btnLeakCanary,btnJsonParse;
+    private Button btnLoadListView, btnLeakCanary,btnJsonParse,btnBindAidl;
     private Intent jumpIntent;
     private Context mContext;
 
@@ -35,13 +36,14 @@ public class MainActivity extends AppCompatActivity {
         btnLoadListView = (Button) findViewById(R.id.btn_listview);
         btnLeakCanary = (Button) findViewById(R.id.btn_leak_test);
         btnJsonParse = (Button)findViewById(R.id.btn_json_parse);
+        btnBindAidl = (Button)findViewById(R.id.btn_bind_aidl);
     }
 
     private void initEvents() {
         btnLoadListView.setOnClickListener(btnClickListener);
         btnLeakCanary.setOnClickListener(btnClickListener);
         btnJsonParse.setOnClickListener(btnClickListener);
-        MyLog.setTAG("OscarChang");
+        btnBindAidl.setOnClickListener(btnClickListener);
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener() {
@@ -60,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_json_parse:
                     mContext.startActivity(new Intent(mContext, MovieActivity.class));
+                    break;
+                case R.id.btn_bind_aidl:
+                    mContext.startActivity(new Intent(mContext, BindAdilActivity.class));
                     break;
                 default:
                     break;

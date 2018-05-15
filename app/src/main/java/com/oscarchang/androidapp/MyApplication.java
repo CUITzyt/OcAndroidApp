@@ -2,6 +2,7 @@ package com.oscarchang.androidapp;
 
 import android.app.Application;
 
+import com.oscarchang.androidapp.comm.MyLog;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
@@ -12,7 +13,6 @@ public class MyApplication extends Application{
 
     private static MyApplication mInstance;
     private RefWatcher mRefWatcher;
-
     public RefWatcher getmRefWatcher(){
         return  mRefWatcher;
     }
@@ -22,6 +22,7 @@ public class MyApplication extends Application{
         super.onCreate();
         mInstance = this;
         mRefWatcher = LeakCanary.install(this);
+        MyLog.setTAG("OscarChang");
     }
 
     public static MyApplication getInstance(){

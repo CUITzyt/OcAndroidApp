@@ -7,5 +7,6 @@
     <string name="leak_test">leakcanary test</string>
     <string name="movie_page">json parse</string>
     <string name="movie_main_lead">movie main lead</string>
-
+    <string name="aidl_test_lead">AIDL page lead</string>
+    <string name="bind_aidl">AIDL test</string>
 </resources>
