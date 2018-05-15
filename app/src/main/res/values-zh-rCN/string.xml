@@ -9,5 +9,6 @@
     <string name="movie_main_lead">电影主页引导</string>
     <string name="aidl_test_lead">AIDL主页引导</string>
     <string name="bind_aidl">AIDL测试</string>
+    <string name="messenger_test">Messenger 测试</string>
 
 </resources>

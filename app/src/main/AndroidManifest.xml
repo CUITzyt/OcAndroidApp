@@ -31,6 +31,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".aidl.BindAdilActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".messenger.MessengerActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

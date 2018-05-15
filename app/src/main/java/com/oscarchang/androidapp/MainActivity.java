@@ -14,11 +14,12 @@ import com.oscarchang.androidapp.aidl.BindAdilActivity;
 import com.oscarchang.androidapp.comm.MyLog;
 import com.oscarchang.androidapp.db.MovieActivity;
 import com.oscarchang.androidapp.leakcanary.LeakTestActivity;
+import com.oscarchang.androidapp.messenger.MessengerActivity;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLoadListView, btnLeakCanary,btnJsonParse,btnBindAidl;
+    private Button btnLoadListView, btnLeakCanary,btnJsonParse,btnBindAidl,btnMessenger;
     private Intent jumpIntent;
     private Context mContext;
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnLeakCanary = (Button) findViewById(R.id.btn_leak_test);
         btnJsonParse = (Button)findViewById(R.id.btn_json_parse);
         btnBindAidl = (Button)findViewById(R.id.btn_bind_aidl);
+        btnMessenger = (Button)findViewById(R.id.btn_messenger);
     }
 
     private void initEvents() {
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnLeakCanary.setOnClickListener(btnClickListener);
         btnJsonParse.setOnClickListener(btnClickListener);
         btnBindAidl.setOnClickListener(btnClickListener);
+        btnMessenger.setOnClickListener(btnClickListener);
     }
 
     private View.OnClickListener btnClickListener = new View.OnClickListener() {
@@ -65,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_bind_aidl:
                     mContext.startActivity(new Intent(mContext, BindAdilActivity.class));
+                    break;
+                case R.id.btn_messenger:
+                    mContext.startActivity(new Intent(mContext, MessengerActivity.class));
                     break;
                 default:
                     break;

@@ -9,4 +9,5 @@
     <string name="movie_main_lead">movie main lead</string>
     <string name="aidl_test_lead">AIDL page lead</string>
     <string name="bind_aidl">AIDL test</string>
+    <string name="messenger_test">Messenger test</string>
 </resources>
